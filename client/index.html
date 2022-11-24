@@ -11,6 +11,14 @@
     <script>
       console.log("hello world :)");
 
+      fetch("http://localhost:3001", { method: 'GET', headers:{'content-type': 'aplication/json'}})
+        .then((res) => {
+          return res.text();
+        })
+        .then((html) => {
+          console.log(html);
+        });
+
       fetch("http://localhost:3001", { method: 'POST', headers:{'content-type': 'aplication/json'}})
         .then((res) => {
           return res.text();
